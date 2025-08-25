@@ -1,0 +1,757 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/******************************************************************
+******************************************************************
+NE PAS MODIFIER / CES LIGNES ENLEVENT LES PADDING ET MARGIN AJOUTÉS
+AUTOMATIQUEMENT PAR LE FICHIER NORMALIZE.CSS
+******************************************************************
+******************************************************************/
+
+/*retire les padding et margin */
+aside, section, article, footer, header, div, p, h1, h2, h3, h4, h5, h6, ol, ul, li, figure { padding:0; margin:0; }
+
+/******************************************************************
+******************************************************************
+CSS PRÉDÉFINIES
+******************************************************************
+******************************************************************/
+
+/* les images ne seront jamais plus grandes que le contenant <figure> qui les contient */
+img { max-width:100%; height: auto;}
+
+/* ajoutez cette classe si il n'y a qu'une seule image */
+/* dans le <figure> et qu'un espace fin apparait sous l'image */
+/* par exemple <img class="no-border-down" src="..." */
+img.no-border-down { display:block;} 
+
+/* dans le cas où le float est requis */
+div.pousse { clear:both; width:0; height:0; overflow:hidden;}
+
+/* polices par défaut */
+body { font-family: Helvetica, Arial, sans-serif; }
+
+/* retire le gras par défaut des titres */
+h1, h2, h3, h4, h5, h6 { font-weight: 400;}
+
+
+/************************************************************************************************************************************
+/************************************************************************************************************************************
+PLACEZ LES DÉFINITIONS CSS DE VOS PAGES SOUS CETTE LIGNE
+PLACEZ LES DÉFINITIONS CSS DE VOS PAGES SOUS CETTE LIGNE
+PLACEZ LES DÉFINITIONS CSS DE VOS PAGES SOUS CETTE LIGNE
+PLACEZ LES DÉFINITIONS CSS DE VOS PAGES SOUS CETTE LIGNE
+PLACEZ LES DÉFINITIONS CSS DE VOS PAGES SOUS CETTE LIGNE
+/************************************************************************************************************************************
+************************************************************************************************************************************/
+
+
+/****************************************/
+/* BODY *********************************
+/****************************************/
+
+/**** Fonts ****/
+
+body { 
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fbfbfb;
+} 
+
+body a {
+    text-decoration: none;
+    color: black;
+}
+
+/**** ACCUEIL ****/
+
+header.accueil {
+    position: relative;
+    margin: 0 auto 0 auto;
+}
+
+header.accueil nav{
+    font-size: 2vw;
+    position: absolute;
+    bottom: 25%;
+    left:27%;
+}
+
+header.accueil nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-right: 5vw;
+    }
+
+header.accueil nav ul li {
+    padding: 0.5vw 5vw 0 0;
+}
+
+header.accueil figure {
+    width: 85vw;
+    margin: 0 auto 0 auto;
+    }
+
+header.accueil a:hover {
+    color: #EA5C6F;
+}
+
+    .carre {
+        height: 0.5vw;
+        width: 0.5vw;
+        border: 0.18vw solid #EA5C6F;
+        display: inline-block;
+        margin-right: 1vw;
+     }
+
+/****
+---------
+PORTFOLIO 
+---------
+****/
+
+/***************** HEADER *****************/
+
+header.pages {
+    margin: 2vw 0 5vw 0.5vw;
+    display:flex;
+    justify-content: space-between;
+    width:95vw;
+}
+
+.portfolio header .portfolioActif {
+    font-weight:700;
+    cursor:auto;
+    color: black;
+}
+
+.motion header .motionActif {
+    font-weight:700;
+    cursor:auto;
+    color: black;
+}
+
+.infos header .aProposActif {
+    font-weight:700;
+    cursor:auto;
+    color: black;
+}
+
+.contact header .contactActif {
+    font-weight:700;
+    cursor:auto;
+    color: black;
+}
+
+header.pages nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; 
+    margin-top: 0.5vw;
+    padding-bottom: 1vw;
+ /*   border-bottom: 3px solid black; */
+    font-size: 1.3vw;
+}
+
+header.pages nav ul .menu {
+    display: flex;
+}
+
+header.pages nav ul li {
+    margin-right: 5vw;
+    color: white;
+}
+
+header .icones {
+    margin-left:30vw;
+}
+
+header i {
+    margin-right: 2vw;
+}
+
+header.pages figure {
+    width: 10vw;
+}   
+
+header.pages a:hover {
+    color: #EA5C6F;
+    transition: all 0.15s ease-in; 
+}
+
+
+/***************** WRAPPER *****************/
+
+.wrapperPortfolio { 
+    width: 85vw;
+}
+
+.wrapperPortfolio h1 {
+    font-weight: 700;
+    font-size: 2vw;
+    letter-spacing: 2vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 3px solid black;
+    margin: 2vw 0 2vw 12vw;  
+    width: 7.5vw;
+    display: block;
+}
+
+/****
+-----------------------
+        PROJETS  
+-----------------------
+****/
+
+.projets {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2vw;    
+}
+
+.projets .gauche {
+    margin-left: 12vw;
+    margin-right:1vw;
+}
+
+.projets .gauche figure {
+    margin-bottom: 1.2vw;
+}
+
+.projets .centre figure {
+    margin-bottom: 1.2vw;
+    margin-right:1vw;
+}
+
+.projets .droite figure {
+    margin-bottom: 1.2vw;
+}
+
+.projets figure{
+    position: relative;
+}
+
+.projets figcaption:hover{
+    color: #EA5C6F;
+    transition: all 0.25s ease-in;
+}
+
+.projets figcaption {
+    position: absolute;
+    top:0;
+    left:0;
+    height:98.5%;
+    width:100%;
+    
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 1.8vw;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.projets figcaption span {
+    margin-left: 1vw;
+    margin-bottom: 0.7vw;
+}
+
+
+/****
+-------------------------
+    Projet Individuel
+-------------------------
+****/
+
+
+/***************** WRAPPER *****************/
+
+.wrapper { 
+    margin-left: 12vw;
+    margin-right: 12.5vw;
+}
+
+.wrapper h1 {
+    font-weight: 700;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 3px solid black;
+    margin: 2vw 0 2vw 0;
+    width: 7.5vw;
+    display: block;
+}
+
+.wrapper p {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    margin-right: 0.5vw;
+}
+
+
+.wrapper .photos {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .photos figure {   
+    margin-right: 2vw;
+    margin-bottom: 2vw;
+}
+
+
+
+
+/****
+------------------------
+      Projet Galerie
+------------------------
+****/
+
+
+/***************** WRAPPER *****************/
+
+.wrapperFoto { 
+    margin-left: 12vw;
+    margin-right: 12.5vw;
+}
+
+.wrapperFoto .contenu {
+    display: flex;
+    justify-content: space-between ;
+}
+
+.wrapperFoto h1 {
+    font-weight: 700;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 3px solid black;
+    margin: 2vw 0 2vw 0;
+    width: 7.5vw;
+    display: block;
+}
+
+.wrapperFoto .texte {
+    font-size: 1.2vw;
+    flex-basis: 38%;
+}
+
+.wrapperFoto .texte p {
+    margin-bottom: 1vw;
+    margin-right: 0.5vw;
+}
+
+.wrapperFoto .fotorama {
+    flex-basis: 60%;
+    padding-bottom: 1vw;
+}
+
+
+
+/****
+------------------------
+      Projet Motion
+------------------------
+****/
+
+.videos video {
+    border: 1px indianred solid;
+    margin-bottom: 1vw;
+}
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videos video {
+    width:100%;
+    flex-basis: 48%;
+}
+
+.videos .gauche {
+    flex-basis: 49%;
+}
+
+.videos .droite {
+    flex-basis: 49%;
+}
+
+.videos figcaption {
+    font-size:0.9vw;
+    margin-bottom: 0.5vw;
+    color: #3e4040;
+}
+
+.videos figcaption span {
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+/****
+------------------------
+         INFO
+------------------------
+****/
+
+.wrapper .info {
+    display:flex;
+    justify-content: space-between;
+}
+
+.wrapper .info article {
+    flex-basis: 60%;
+}
+
+.infos .wrapper img {
+    width:20vw;
+    height: auto;
+    margin-left: 5vw;
+    margin-top: -2vw;
+    flex-basis: 20%;
+}
+
+/********* FOOTER ***********/
+
+.up {
+    visibility: hidden;
+}
+
+.retour {
+    font-size: 2.5vw; 
+    text-align: right;
+    margin-right: 15vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer {
+    border-top: 0.2vw black solid;
+    color: black;
+    padding: 1vw 0vw 2vw 0vw;
+    margin: 4vw 50vw 0 12vw;
+    box-sizing:border-box;
+}
+
+.contact footer {
+    margin-top: 55vh;
+}
+.infos footer {
+    margin-top: 12vh;
+}
+
+/*
+.contact footer,
+.infos footer {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100vw;
+} */
+
+
+/****************************************/
+/* SCÉNARI0 JQUERY
+/* SCÉNARI0 JQUERY
+/* SCÉNARI0 JQUERY
+/****************************************/
+
+/* réglage de l'apparence initiale des objets avant le script jQuery */
+
+
+
+
+
+
+
+
+/**************************************************************
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN D'UN MAXIMUM DE 680px (cell)
+*************************************************************/
+
+
+@media screen and (max-width: 680px) { 
+    
+    /* ne pas modifier */
+    body { font-size:16px; } 
+    h1 { font-size:48px; }
+    h2 { font-size:36px; }
+    h3 { font-size:24px; }
+    h4 { font-size:20px; }
+    h5 { font-size:18px; }
+    h6 { font-size:16px; }
+    /* ne pas modifier */
+    
+    /* CSS ENTRE CES LIGNES */
+    /* CSS ENTRE CES LIGNES */
+    
+    .accueil {
+        margin-top:5vh;
+        background-color: #fbfbfb;
+    }
+    
+    header.accueil figure{
+        position: relative;
+        width: 100%;
+    }
+    
+    header.accueil nav {
+        position: absolute;
+        top:90%;
+        left:36%;
+        text-align: center;
+    }
+    
+    header.accueil nav ul {
+        display: block;
+        font-size: 6vw;        
+    }
+      
+    header.accueil nav ul li {
+        margin-bottom: 3vw;      
+    }
+    
+    .carre {
+        display:none;
+    }
+    
+    
+    header.pages {
+        display: block;
+    }
+       
+    header.pages figure {
+        width: 30%;
+        display: block;
+        margin: 4vw auto 3vw auto;
+    }
+    
+    header.pages nav ul{
+        display: block;
+    }
+    
+    header.pages nav ul .menu{
+        justify-content: space-between;
+        text-align: center;
+        font-size: 4vw;
+        width:70vw;
+        margin: 0 auto 0 auto;
+    }
+    
+    header.pages nav ul .menu li {
+        margin: 0 0 2vw 0;
+    }
+    
+    header.pages nav ul .icones {
+        font-size: 5vw;
+        text-align: center;
+        margin: 2vw 0 5vh 0vw;
+    }
+    
+    header i {
+        margin-left: 2vw;
+    }
+
+    .wrapper h1, 
+    .wrapperPortfolio h1,
+    .wrapperFoto h1 {
+        font-size: 7vw;
+    }
+    
+    .wrapperPortfolio .projets,
+    .wrapper .photos,
+    .wrapperFoto .contenu,
+    .wrapper .contenu,
+    .wrapper .info {
+        display: block;
+        margin: 0vw;
+        width: 80%;
+        margin-left: 12vw;
+    }    
+    
+    
+    .wrapperPortfolio .projets .gauche,
+    .wrapper .photos,
+    .wrapperFoto .contenu,
+    .wrapper .contenu {
+        width: 100%;
+        margin: 0vw;
+    }
+    
+    
+    .wrapper .info img {
+        margin: 2vw 0 0 12vw;
+        width:30vw;
+    }
+    
+    .wrapper .logiciel,
+    .wrapperFoto .logiciel {
+        font-size: 2.5vw;
+        margin: 0, 0, 0, 0;
+    }
+    
+    .wrapperPortfolio .projets figcaption {
+        font-size: 5vw;
+    }   
+    
+    .wrapper .videos {
+        display:block;
+    }
+    
+    .wrapper .videos figcaption {
+        font-size: 3vw;
+        margin-top: 2vw;
+        margin-bottom:1vw;
+    }    
+    .wrapper .videos figcaption span {
+        font-size: 4vw;
+    }
+    
+    .wrapper p {
+        font-size: 3vw;
+        padding: 0vw 0 1vw 0;
+    }
+        
+    .wrapperFoto p {
+        font-size: 3vw;
+        padding-top: 0vw;
+    } 
+    
+    .wrapperFoto .texte {
+        margin-top: 3vw;
+    }
+
+    .up {
+        visibility: visible;
+        font-size: 10vw;
+        text-align: center;
+        margin-top: 5vw;
+        color: #EA5C6F;
+    }
+    
+    .retour {
+        font-size: 5vw;
+        margin-top: 2vh;
+    }    
+    .retour i {
+        font-size: 4vw;
+        margin-top:0.2vw;
+    }
+    
+    .contact footer {
+        margin-top: 43.5vh
+    }
+    
+    footer {
+        margin-right: 16vw;
+    }
+    
+    footer p {
+        font-size: 1.5vw;
+    }
+    
+
+	/* CSS ENTRE CES LIGNES */
+    /* CSS ENTRE CES LIGNES */
+}
+
+
+
+
+/******************************************************************
+******************************************************************
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+CSS POUR DESIGN REACTIF D'UN ÉCRAN ENTRE 681px (cell) et 1024px (ipad)
+******************************************************************
+******************************************************************/
+
+
+@media screen and (min-width:681px) and (max-width: 1024px) { 
+    
+    /* CSS ENTRE CES LIGNES */
+    /* CSS ENTRE CES LIGNES */
+
+    body {
+    }
+    
+    header.accueil figure {
+        width: 100%;
+    }
+    
+    header.accueil nav ul {
+        font-size: 4vw;
+    }
+    
+    header.accueil nav {
+        position: absolute;
+        top:80%;
+        left:23%;
+    }
+
+    
+    header.pages figure {
+        width: 20vw;
+    }
+    
+    header.pages .icones {
+        margin:0 0 0 10vw;
+        font-size: 1.8vw;
+        margin-top: 2vw;
+    }
+    
+    .pages .menu {
+        font-size: 1.8vw;
+        margin-top: 2vw;
+    }
+    
+    .wrapperPortfolio h1, 
+    .wrapper h1,
+    .wrapperFoto h1 {
+        font-size: 4vw;
+    }
+    
+    .wrapper p {
+        font-size: 2vw;
+    }
+    
+    
+    .wrapperFoto p {
+        font-size: 1.65vw;
+    }
+    
+    .wrapper .logiciel,
+    .wrapperFoto .logiciel {
+        font-size: 1.7vw;
+    }
+    
+    .wrapper .videos figcaption {
+        font-size: 1.5vw;
+    }    
+    .wrapper .videos figcaption span {
+        font-size: 2vw;
+    }
+    
+    footer p {
+        font-size: 1.5vw; 
+    }
+    
+    
+	/* CSS ENTRE CES LIGNES */
+    /* CSS ENTRE CES LIGNES */
+}
+
+
